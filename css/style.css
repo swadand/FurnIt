@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=MuseoModerno:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,700;1,800&display=swap');
+
+*{
+  margin: 5px;
+  font-family: 'MuseoModerno', cursive;
+}
+
+.navBar{
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  flex: 1 1 auto;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+}
+
+.searchBarInput{
+  padding: 4px;
+  background-color: #e8e8e8;
+  border: 0px solid #000;
+  border-radius: 5px;
+}
+
+.deskUser{
+  display: none;
+}
+
+.otherPages{
+  display: none;
+}
+
+header{
+  height: 200px;
+}
+
+.landingText{
+  background-image: url("../images/singleChairWhite.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover
+}
+
+.filterBar{
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
+  align-items: center;
+}
+
+.filterBar span {
+  height: 60px;
+  width: 80px;
+  text-align: center;
+  align-items: center;
+  background-color: #e4e4ff;
+  border-radius: 15px;
+}

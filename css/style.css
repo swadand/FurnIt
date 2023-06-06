@@ -4,13 +4,7 @@
 *{
   /* font-family: 'MuseoModerno', cursive; */
   font-family: 'Lexend', sans-serif;
-}
-
-html, body {
-  margin: 0;
-  padding: 0;
-  color: #1e1d1d;
-
+  margin: 0px;;
 }
 
 h4{
@@ -37,23 +31,20 @@ h4{
   border-radius: 5px;
 }
 
-.deskUser{
-  display: none;
-}
-
 .otherPages{
   display: none;
 }
 
 header{
-  height: 200px;
+  height: 500px;
 }
 
 .landingText{
-  background-image: url("../images/singleChairWhite.jpg");
+  height: 500px;
+  background-image: url("https://source.unsplash.com/6CJg-fOTYs4");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover
+  background-size: cover;
 }
 
 .filterBar{
@@ -93,6 +84,7 @@ header{
   width: 100%;
   height: 100%;
   object-fit: cover;
+  overflow: visible;
 }
 
 .tile:nth-child(1){
@@ -123,6 +115,7 @@ header{
   display: flex;
   gap: 15px;
   overflow-x: scroll;
+  margin-top: 10px;
 }
 .panelTile img{
   height: 350px;
@@ -132,11 +125,13 @@ header{
 
 .newContainer{
   margin: 25px;
-  padding: 10px;
+ /*  padding: 10px; */
 }
 .new{
   display: flex;
+  overflow-x: scroll;
   gap: 5px;
+  margin-top: 10px;
 }
 .newTile img{
   height: 400px;
@@ -159,18 +154,18 @@ footer{
 }
 
 .mainFooter{
-  height: 350px;
+  height: fit-content;
   color: #e4e4ff;
   margin: 0px;
   background-color: #232f3e;
   padding: 50px;
   display: flex;
+  flex-direction: column;
   gap: 12px;
 }
 
 .mainAbout{
-  width: 300px;
-  line-height: 23px;
+  width: auto;
 }
 
 .mainAbout p{
@@ -178,9 +173,9 @@ footer{
 }
 
 .list{
-  padding-left: 20px;
   display: flex;
   flex: auto;
+  flex-direction: column;
   gap: 25px;
   justify-content: center;
   line-height: 25px;
@@ -294,13 +289,135 @@ footer{
 	display: flex;
 }
 
+/* Utilities */
+
+/* css arrow */
+
+.icon {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 80px;
+  height: 60px;
+  cursor: pointer;
+  margin-left: 10px;
+  scale: 25%;
+}
+
 .arrow {
-	height: 40px;
-	width: 40px;
+  position: absolute;
+  top: 25px;
+  width: 90%;
+  height: 10px;
+  background-color: #fff;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
+  animation: arrow 700ms linear infinite;
+}
+
+.arrow::after, .arrow::before {
+  content: '';
+  position: absolute;
+  width: 60%;
+  height: 10px;
+  right: -8px;
+  background-color: #fff;
+}
+
+.arrow::after {
+  top: -12px;
+  transform: rotate(45deg);
+}
+
+.arrow::before {
+  top: 12px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
+  transform: rotate(-45deg);
+}
+/* css arrow end */
+
+@media only screen and (min-width: 1032px) {
+header{
+  margin: 0px 25px;
+  height: 490px;
+}
+
+.landingText{
+  height: 490px;
+  background-image: url("https://source.unsplash.com/6CJg-fOTYs4");
+  background-position: 50% 80%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.mainFooter{
+  height: 350px;
+  color: #e4e4ff;
+  margin: 0px;
+  background-color: #232f3e;
+  padding: 50px;
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+}
+
+.mainAbout{
+  width: 300px;
+  line-height: 23px;
+}
+
+.list{
+  display: flex;
+  flex: auto;
+  flex-direction: row;
+  gap: 25px;
+  justify-content: center;
+  line-height: 25px;
+}
+
+/* affordableCategory css */
+.card {
+	height: 520px;
+	width: 300px;
+	top: 0;
 	display: grid;
-	background-color: #111;
-	text-align: center;
-	align-items: center;
-	margin-left: 20px;
-	border-radius: 50px;
+	background-color: #aad;
+	box-shadow: #ddd 1px 1px 8px;
+}
+
+}
+
+
+@media only screen and (max-width: 700px) {
+  .tile > img{
+    overflow: hidden;
+  }
+  .productGrid{
+    margin: 10px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    overflow: hidden;
+  }
+
+  .tile:nth-child(1){
+    grid-column: span 4;
+    grid-row: span 1;
+    height: 400px;
+  }
+  
+  .tile:nth-child(2),
+  .tile:nth-child(3){
+    grid-column: span 2;
+    grid-row: span 1;
+    overflow: hidden;
+    height: 400px;
+  }
+  
+  .tile:nth-child(4),
+  .tile:nth-child(5){
+    grid-column: span 2;
+    grid-row: span 1;
+    overflow: hidden;
+    height: 400px;
+  }
 }

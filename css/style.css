@@ -98,6 +98,7 @@ header{
   grid-column: span 1;
   grid-row: span 3;
   background-color: #705757;
+  overflow: hidden;
 }
 
 .tile:nth-child(4),
@@ -105,6 +106,7 @@ header{
   grid-column: span 1;
   grid-row: span 3;
   background-color: #c72d2d;
+  overflow: hidden;
 }
 
 .affordableCat{
@@ -142,6 +144,32 @@ header{
 .ideas{
   margin: 25px;
 }
+
+.ideas > span {
+  font-size:x-large;
+  line-height: 34px;
+}
+
+/* image gallery */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create two equal columns that sits next to each other */
+.column {
+  flex: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* image gallery end*/
 
 footer{
   margin: 0px;
@@ -236,12 +264,12 @@ footer{
 /* Handle */
 ::-webkit-scrollbar-thumb {
   width: 5px;
-  background: #000000;
+  background: #bbbbbb;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: #a8a6a6;
 }
 
 
@@ -419,5 +447,59 @@ header{
     grid-row: span 1;
     overflow: hidden;
     height: 400px;
+  }
+}
+
+@media only screen and (max-width: 412px) {
+  .tile > img{
+    overflow: hidden;
+  }
+  .productGrid{
+    margin: 10px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    overflow: hidden;
+  }
+
+  .tile:nth-child(1){
+    grid-column: span 4;
+    grid-row: span 1;
+    overflow: hidden;
+    height: 200px;
+  }
+  
+  .tile:nth-child(1) > img{
+    object-fit: cover;
+    height: 400px;
+    transform: translate(0px,-160px);
+  }
+  
+  .tile:nth-child(2),
+  .tile:nth-child(3){
+    grid-column: span 2;
+    grid-row: span 1;
+    overflow: hidden;
+    height: 200px;
+  }
+  
+  .tile:nth-child(4),
+  .tile:nth-child(5){
+    grid-column: span 2;
+    grid-row: span 1;
+    overflow: hidden;
+    height: 200px;
+  }
+
+  .affordableCat{
+    margin: 10px;
+  }
+
+  .newContainer{
+    margin: 10px;
+   /*  padding: 10px; */
+  }
+
+  .ideas{
+    margin: 10px;
   }
 }

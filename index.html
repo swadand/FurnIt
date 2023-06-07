@@ -5,19 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   </head>
   <body>
     <nav class="navBar">
-      <span>FurnIt</span>
+      <div class="titleMenu">
+        <span class="material-symbols-outlined">menu</span>
+        <div>FurnIt</div>
+      </div>
       <div class="otherPages">
         <span>About us</span>
         <span>Furniture</span>
         <span>Blog</span>
       </div>
       <div class="searchBar">
-        <i>○</i>
         <input type="text" name="searchBarInput" class="searchBarInput" placeholder="Search Furniture"/>
-        <i>X</i>  
+        <span class="material-symbols-outlined">search</span>
       </div>
     </nav>
     <header>
@@ -114,14 +117,13 @@
         <span>More ideas and inspirations <hr></span>
         <div class="filterBar">
           <div class="filterBarDiv filterOutline" value="all">All</div>
-          <div class="filterBarDiv">LivingRoom</div>
+          <div class="filterBarDiv" value="living">LivingRoom</div>
           <div class="filterBarDiv" value="dining">DiningRoom</div>
-          <div class="filterBarDiv">Bedroom</div>
-          <div class="filterBarDiv">OfficeTables</div>
-          <div class="filterBarDiv">Bathroom</div>
+          <div class="filterBarDiv" value="bedroom">Bedroom</div>
+          <div class="filterBarDiv" value="officetable">OfficeTables</div>
+          <div class="filterBarDiv" value="bathroom">Bathroom</div>
           <div class="filterBarDiv" value="kitchen">Kitchen</div>
-          <div class="filterBarDiv">Office</div>
-          <div class="filterBarDiv">Garden</div>
+          <div class="filterBarDiv" value="household">HouseHold</div>
         </div>
         <div class="imageGallery">
           <div class="row" id="row">

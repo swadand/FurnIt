@@ -46,19 +46,82 @@ const images = [
         "link": "https://source.unsplash.com/U6Ds9z7i3VQ"
     },
     {
-        "type": "kitchen", 
+        "type": "dining", 
         "link": "https://source.unsplash.com/0dszrg9-V1o"
     },
     {
-        "type": "kitchen", 
+        "type": "dining", 
         "link": "https://source.unsplash.com/xstTzTRiJ4k"
     }
 ]
-const imgLink = images;
+var Images = images;
 
-for (var i=1; i < imgLink.length; i++){
-    var IMG = document.createElement("img");
-    IMG.src = imgLink[i].link;
+//filter bar outline
+var filterDiv = document.getElementsByClassName("filterBarDiv");
 
-    document.getElementById(`column-${i%3+1}`).appendChild(IMG);
+Array.prototype.forEach.call(filterDiv, function(fD) {
+    fD.addEventListener("click", filterImages);
+});
+
+function filterImages(){
+    Images = images;
+    var filterDiv2 = document.getElementsByClassName("filterBarDiv");
+    
+    [...filterDiv2].forEach((fD) => {
+        if(fD === this){
+            fD.classList.add("filterOutline");
+        } else {
+            if(fD.classList.contains("filterOutline")){
+                fD.classList.remove("filterOutline");
+            }
+        }
+    });
+
+    if(this.attributes.value.textContent == "all"){
+        Images = images;
+    } else {
+        Images = Images.filter((img) => {
+            return img.type == this.attributes.value.textContent;
+        });
+    }
+    removeImages();
+    renderImages();
+}
+
+renderImages()
+function renderImages(){
+    const imgLink = Images;
+    for (var i=0; i < imgLink.length; i++){
+        var IMG = document.createElement("img");
+        IMG.src = imgLink[i].link;
+        
+        document.getElementById(`column-${i%3+1}`).appendChild(IMG);
+    }
+}
+
+function removeImages(){
+    for (var i=1; i<4; i++){
+        var column = document.getElementById(`column-${i}`);
+        column.innerHTML = '';
+    }
+}
+
+var seeMoreButton = document.getElementById("seeMore");
+seeMoreButton.addEventListener("click", expandGallery);
+var expanded = false;
+
+function expandGallery(){
+    var galleryContainer = document.getElementById("row");
+    
+    if (expanded == false){
+        galleryContainer.style.height = "fit-content";
+        seeMoreButton.textContent = "See Less";
+        seeMoreButton.parentElement.style.background = "rgba(255,255,255,1)";
+        expanded = true;
+    }
+    else if (expanded == true){
+        galleryContainer.style.height = "980px";
+        seeMoreButton.textContent = "See More";
+        expanded = false;
+    }
 }

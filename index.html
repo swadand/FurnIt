@@ -22,8 +22,10 @@
     </nav>
     <header>
       <div class="landingText">
-        <h1><b>Find Your Dream Furniture</h1>
-        <p>Find your Dream Furniture among Our Vast Selection of Premium Products.</p>
+        <div class="landingTextPH1">
+          <h1><b>Find Your Dream Furniture</h1>
+          <p>Find your Dream Furniture among Our Vast Selection of Premium Products.</p>
+        </div>
       </div>
     </header>
     <div class="content">
@@ -111,23 +113,18 @@
       <div class="ideas">
         <span>More ideas and inspirations <hr></span>
         <div class="filterBar">
-          <div class="outlinetest">All</div>
-          <div class="outlinetest">LivingRoom</div>
-          <div>DiningRoom</div>
-          <div>Bedroom</div>
-          <div>OfficeTables</div>
-          <div>Outdoor</div>
-          <div>Bathroom</div>
-          <div>Workspace</div>
-          <div>Hallway</div>
-          <div>Kitchen</div>
-          <div>Office</div>
-          <div>Rest</div>
-          <div>Garden</div>
-          <div>Laundry</div>
+          <div class="filterBarDiv filterOutline" value="all">All</div>
+          <div class="filterBarDiv">LivingRoom</div>
+          <div class="filterBarDiv" value="dining">DiningRoom</div>
+          <div class="filterBarDiv">Bedroom</div>
+          <div class="filterBarDiv">OfficeTables</div>
+          <div class="filterBarDiv">Bathroom</div>
+          <div class="filterBarDiv" value="kitchen">Kitchen</div>
+          <div class="filterBarDiv">Office</div>
+          <div class="filterBarDiv">Garden</div>
         </div>
         <div class="imageGallery">
-          <div class="row">
+          <div class="row" id="row">
             <div class="column" id="column-1">
         
             </div>
@@ -137,6 +134,9 @@
             <div class="column" id="column-3">
               
             </div>
+          </div>
+          <div class="seeMore">
+            <button id="seeMore">See More</button>
           </div>
         </div>
       </div>

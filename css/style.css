@@ -68,13 +68,13 @@ h4{
   overflow: hidden;
   background-color: #2e3c4c;
   position: fixed;
-  margin-top: 591px;
   display: flex;
   visibility: hidden;
   flex-direction: column;
   gap: 10px;
   z-index: 90;
   padding-bottom: 17px;
+  top: 0px;
 }
 .otherPages > span{
   cursor: pointer;

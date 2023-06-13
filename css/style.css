@@ -61,19 +61,20 @@ h4{
 }
 
 .otherPages{
-  padding-right: 200px;
-  padding-left: 40px;
-  padding-top: 40px;
-  margin-left: -100px;
   height: 100vh;
+  padding-right: 75px;
+  padding-left: 40px;
+  padding-top: 36px;
   overflow: hidden;
   background-color: #2e3c4c;
-  position: relative;
-  margin-top: auto;
+  position: fixed;
+  margin-top: 591px;
   display: flex;
   visibility: hidden;
   flex-direction: column;
   gap: 10px;
+  z-index: 90;
+  padding-bottom: 17px;
 }
 .otherPages > span{
   cursor: pointer;
@@ -89,12 +90,13 @@ h4{
 }
 
 .blackOverlay{
-  height: 100vh;
+  height: 1000vh;
   width: 100vw;
   background-color: #000;
-  opacity: 60%;
+  opacity: 0%;
   z-index: 85;
   position: fixed;
+  pointer-events: none;
 }
 
 header{

@@ -427,15 +427,19 @@ var Images = images;
 
 //hamburger menu
 var ham = document.getElementById('hamburger');
+var overlay = document.getElementById('blackOverlay');
+
 ham.addEventListener('click', function(){
     var sideMenu = document.getElementById("otherPages");
 
+    overlay.style.opacity = "60%";
     sideMenu.style.visibility = 'visible';
 });
 var closeButton = document.getElementById("sideMenuClose");
 closeButton.addEventListener("click", function(){
     var sideMenu = document.getElementById("otherPages");
-
+    
+    overlay.style.opacity = "0%";
     sideMenu.style.visibility = 'hidden';
 });
 

@@ -25,6 +25,10 @@ h4{
   background-color: #2e3c4c;
   color: #e4e4ff;
 }
+.navBar > div{
+  font-size: large;
+  font-weight: 500;
+}
 .navBar > span{
   cursor: pointer;
 }
@@ -32,18 +36,20 @@ h4{
 .titleMenu{
   display: flex;
   align-items: center;
-  margin-left: 45px;
+  margin-left: 10px;
+  gap: 2px;
 }
 .titleMenu > span{
   cursor: pointer;
+  display: block;
 }
-
 
 .searchBar{
   display: flex;
+  gap: 2px;
 }
 .searchBar > span{
-  margin: 0px 5px;
+  margin: 0px 15px;
   cursor: pointer;
 }
 
@@ -55,7 +61,40 @@ h4{
 }
 
 .otherPages{
-  display: none;
+  padding-right: 200px;
+  padding-left: 40px;
+  padding-top: 40px;
+  margin-left: -100px;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #2e3c4c;
+  position: relative;
+  margin-top: auto;
+  display: flex;
+  visibility: hidden;
+  flex-direction: column;
+  gap: 10px;
+}
+.otherPages > span{
+  cursor: pointer;
+}
+.otherPages > a{
+  width: min-content;
+  text-decoration: none;
+  color: #d8dde2;
+}
+.otherPages > a:hover{
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.blackOverlay{
+  height: 100vh;
+  width: 100vw;
+  background-color: #000;
+  opacity: 60%;
+  z-index: 85;
+  position: fixed;
 }
 
 header{
@@ -447,6 +486,26 @@ footer{
 header{
   margin: 0px 25px;
   height: 490px;
+}
+
+.titleMenu{
+  gap: 10px;
+}
+.titleMenu > span{
+  display: none;
+}
+
+.navBar > div{
+  font-size:x-large;
+  font-weight: 500;
+}
+
+.searchBar{
+  gap: 10px;
+  padding-right: 50px;
+}
+.searchBar > input{
+  width: 350px;
 }
 
 .landingText{

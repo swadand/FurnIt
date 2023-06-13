@@ -425,6 +425,20 @@ const images = [
 
 var Images = images;
 
+//hamburger menu
+var ham = document.getElementById('hamburger');
+ham.addEventListener('click', function(){
+    var sideMenu = document.getElementById("otherPages");
+
+    sideMenu.style.visibility = 'visible';
+});
+var closeButton = document.getElementById("sideMenuClose");
+closeButton.addEventListener("click", function(){
+    var sideMenu = document.getElementById("otherPages");
+
+    sideMenu.style.visibility = 'hidden';
+});
+
 //filter bar outline
 var filterDiv = document.getElementsByClassName("filterBarDiv");
 

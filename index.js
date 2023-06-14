@@ -428,20 +428,25 @@ var Images = images;
 //hamburger menu
 var ham = document.getElementById('hamburger');
 var overlay = document.getElementById('blackOverlay');
+overlay.addEventListener("click", hideShowBar);
 
-ham.addEventListener('click', function(){
+ham.addEventListener('click', showSideBar);
+function showSideBar(){
     var sideMenu = document.getElementById("otherPages");
 
     overlay.style.opacity = "60%";
+    overlay.style.pointerEvents = "all"
     sideMenu.style.visibility = 'visible';
-});
+}
 var closeButton = document.getElementById("sideMenuClose");
-closeButton.addEventListener("click", function(){
+closeButton.addEventListener("click", hideShowBar);
+function hideShowBar(){
     var sideMenu = document.getElementById("otherPages");
     
     overlay.style.opacity = "0%";
+    overlay.style.pointerEvents = "none"
     sideMenu.style.visibility = 'hidden';
-});
+}
 
 //filter bar outline
 var filterDiv = document.getElementsByClassName("filterBarDiv");

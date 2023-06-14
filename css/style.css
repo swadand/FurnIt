@@ -7,6 +7,16 @@
   margin: 0px;;
 }
 
+input,
+textarea,
+button,
+select,
+div,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+
 h4{
   margin-bottom: 0px;
 }

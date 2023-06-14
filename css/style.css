@@ -53,6 +53,10 @@ h4{
   cursor: pointer;
   display: block;
 }
+.titleMenu > a{
+  text-decoration: none;
+  color: #e4e4ff;
+}
 
 .searchBar{
   display: flex;
@@ -407,9 +411,11 @@ footer{
 }
 
 .cardText{
-	height: auto;
+	height: 160px;
   color: beige;
-	align-items: center;
+	align-items: start;
+  display: grid;
+  padding-top: 20px;
 	padding-left: 20px;
 	padding-right: 20px;
   justify-content: space-around;
@@ -501,6 +507,7 @@ header{
 }
 
 .titleMenu{
+  margin-left: 40px;
   gap: 10px;
 }
 .titleMenu > span{

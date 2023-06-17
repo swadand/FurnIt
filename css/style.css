@@ -165,19 +165,25 @@ header{
   height: 100%;
   object-fit: cover;
   overflow: visible;
+  z-index: 10;
+}
+.tile > p{
+  margin-top: -406px;
+  padding: 15px;
+  font-weight: 700;
+  font-size: large;
+  position: absolute;
 }
 
 .tile:nth-child(1){
   grid-column: span 2;
   grid-row: span 6;
-  background-color: #272727;
 }
 
 .tile:nth-child(2),
 .tile:nth-child(3){
   grid-column: span 1;
   grid-row: span 3;
-  background-color: #705757;
   overflow: hidden;
 }
 
@@ -185,7 +191,6 @@ header{
 .tile:nth-child(5){
   grid-column: span 1;
   grid-row: span 3;
-  background-color: #c72d2d;
   overflow: hidden;
 }
 

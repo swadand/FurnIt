@@ -1,5 +1,7 @@
 //import images from "./data/imgLink.json" assert { type: 'json' };
 //import assertions dont work in firefox
+import { renderCart } from "./utilities.js";
+
 const images = [
     {
         "type": "kitchen",
@@ -433,7 +435,7 @@ overlay.addEventListener("click", hideShowBar);
 ham.addEventListener('click', showSideBar);
 function showSideBar() {
     var sideMenu = document.getElementById("otherPages");
-
+    
     overlay.style.opacity = "60%";
     overlay.style.pointerEvents = "all"
     sideMenu.style.visibility = 'visible';
@@ -463,25 +465,17 @@ Cart.addEventListener("click", function () {
     overlay.style.opacity = "60%";
     overlay.style.pointerEvents = "all"
     CartDiv.style.visibility = "visible";
+    
+    renderCart();
 });
 var CloseCart = document.getElementById("closeCart");
 CloseCart.addEventListener("click", function () {
     var CartDiv = document.getElementById("cartDiv");
-
+    
     overlay.style.opacity = "0%";
     overlay.style.pointerEvents = "none"
     CartDiv.style.visibility = "hidden";
 });
-
-//adding to cart
-var cartList = [];
-var buyIcon = document.getElementsByClassName("iconFurniture");
-Array.prototype.forEach.call(buyIcon, function(icon){
-    icon.addEventListener("click", function(){
-        console.log('item Added');
-    })
-});
-
 
 //filter bar outline
 var filterDiv = document.getElementsByClassName("filterBarDiv");
